@@ -20,9 +20,25 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int i = 0;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void CliclBTH_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (i % 2 == 0)
+            {
+                Background = Brushes.Blue;
+                i++;
+            }
+            else
+            {
+                Background = Brushes.Red;
+                i++;
+                
+            }
         }
     }
 }
