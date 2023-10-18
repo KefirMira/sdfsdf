@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+﻿using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace WpfApp1
 {
@@ -21,7 +10,11 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         private  int i = 0;
-        Brushes colors = [Brushes.Blue,Brushes.Red,Brushes.Green];
+        SolidColorBrush[] colors =
+        {
+            Brushes.Yellow, Brushes.Green, 
+            Brushes.Blue
+        };
         public MainWindow()
         {
             InitializeComponent();
@@ -32,11 +25,13 @@ namespace WpfApp1
             if (i % 2 == 0)
             {
                 Background = colors[0];
+                CliclBTH.Background = colors[1];
                 i++;
             }
             else
             {
                 Background = colors[1];
+                CliclBTH.Background = colors[0];
                 i++;
                 
             }
