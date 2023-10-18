@@ -20,7 +20,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int i = 0;
+        private  int i = 0;
+        Brushes colors = [Brushes.Blue,Brushes.Red,Brushes.Green];
         public MainWindow()
         {
             InitializeComponent();
@@ -30,12 +31,12 @@ namespace WpfApp1
         {
             if (i % 2 == 0)
             {
-                Background = Brushes.Blue;
+                Background = colors[0];
                 i++;
             }
             else
             {
-                Background = Brushes.Red;
+                Background = colors[1];
                 i++;
                 
             }
